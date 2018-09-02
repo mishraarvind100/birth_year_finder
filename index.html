@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Birth Year Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+<body>
+   <div id="container">
+    <form action="forBirthYearInput">
+        <input type="number" name="number" id="inputNumber" placeholder="Enter your age here" class="commonStyle">
+        <input value="Find Your Birth Year" id="button" type="button" class="commonStyle">
+    </form>
+    </div>
+    <p id="year">Year</p>
+    <script type="text/javascript">
+        function calculate() {
+            let inputNumber = document.querySelector("#inputNumber").value;
+            if (inputNumber === "" || inputNumber === 0) {
+                window.alert("Please enter your age!");
+                return;
+            }
+            else {
+                window.alert("Thanks for entering your age!");
+            }
+            let date = new Date().getFullYear();
+            let birthYear = date - inputNumber;
+            document.querySelector("#year").style.display = "block";
+            document.querySelector("#year").innerHTML = `Your birth year is ${birthYear}`;
+        };
+        document.querySelector("#year").style.display = "none";
+        document.querySelector("#button").onclick = function(){
+            calculate();
+        };
+    </script>
+</body>
+</html>

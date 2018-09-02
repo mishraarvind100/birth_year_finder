@@ -1,0 +1,57 @@
+*{
+    font-family: 'Muli', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgba(202, 207, 210, .9);
+}
+#container{
+    margin-top: 20em;
+    text-align: center;
+}
+#inputNumber {
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+    font-size: 1em;
+    background-color: white;
+    color: dimgray;
+}
+#inputNumber:focus {
+    border-bottom: 1px solid #2874A6;
+    //outline: none;
+    background-color: lightblue;
+    color: #0B5345;
+    transition-timing-function: linear;
+    transition-property: all;
+    transition-duration: .02s;
+}
+#button {
+    width: 200px;
+    height: 30px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    background-color:#2874A6;
+    color: azure;
+}
+#button:hover{
+    background-color: #1A5276;
+    color: blanchedalmond;
+    transition: background-color 2s ease-out;
+}
+#button:active {
+    background-color: #27AE60;
+    transition: background-color .02s ease-out;
+}
+.commonStyle {
+    border: none;
+    outline: none;
+    letter-spacing: 1px;
+}
+#year {
+    text-align: center;
+    color: black;
+    letter-spacing: 1px;
+    line-height: 20%;
+    font-weight: 600;
+}
